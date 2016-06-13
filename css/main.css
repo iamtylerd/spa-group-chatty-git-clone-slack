@@ -1,0 +1,47 @@
+.navContainer {
+	padding-top: 15px;
+}
+
+.navbar-form {
+	margin-right: 10px;
+}
+
+.navCheckbox {
+	margin-left: 15%;
+}
+
+.userCheckbox {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+.checkboxGroup {
+	margin-top: 1rem;
+}
+
+.normalTheme {
+	background: whitesmoke;
+	margin: 2rem auto 0;
+	width: 60%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: darkslategrey;
+}
+
+.darkTheme {
+	background: darkslategrey;
+	color: whitesmoke;
+	margin: 2rem auto 0;
+	width: 60%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.largeText {
+	font-size: 3rem;
+}
