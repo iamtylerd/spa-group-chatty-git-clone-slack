@@ -1,18 +1,18 @@
 
-var container = document.getElementById("message-container");
-var input = document.getElementById("message-input");
+var container = document.getElementById("messagesContainer");
+var input = document.getElementById("messageInput");
 
 //Listener for enter/return in the message field
-var messageReturn = document.getElementById("message-input").addEventListener("keypress", function(e) {
-	if (e.code === 13) {
-		var newMessage = document.createElement("p");
-		newMessage.innerHTML = input.value;
-		container.appendChild(newMessage);
-	}
-});
+// var messageReturn = document.getElementById("message-input").addEventListener("keypress", function(e) {
+// 	if (e.code === 13) {
+// 		var newMessage = document.createElement("p");
+// 		newMessage.innerHTML = input.value;
+// 		container.appendChild(newMessage);
+// 	}
+// });
 
-//Listener for submit button
-var submitButton = document.getElementById("submit-button").addEventListener("click", function(e) {
+// //Listener for submit button
+var submitButton = document.getElementById("submitButton").addEventListener("click", function(e) {
 	var newMessage = document.createElement("p");
 	newMessage.innerHTML = input.value;
 	container.appendChild(newMessage);
@@ -21,7 +21,7 @@ var submitButton = document.getElementById("submit-button").addEventListener("cl
 });
 
 //Listener for delete all messages
-var deleteMessages = document.getElementById("delete-messages");
+var deleteMessages = document.getElementById("deleteAllButton");
 deleteMessages.addEventListener("click", function(e) {
 	//if no messages, delete button is disabled
 	if (container.hasChildNodes() === false){

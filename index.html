@@ -9,35 +9,39 @@
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-	<div class="navContainer clearfix">
-	<nav clas="navbar navbar-default navbar-fixed-top navbar-custom">
-	  <a class="navbar-brand" href="#">
-      <span class="logo">Git Clone Slack</span>
-      </a>
-     <form class="navbar-form navbar-left navCheckbox" role="input">
-     	<div class="form-group checkboxGroup">
-			<input type="checkbox" id="dark-box"><span class="userCheckbox">Dark Theme</span>
-			<input type="checkbox" id="large-box"><span class="userCheckbox">Large Text</span>
-		</div>
-     </form>
-     <form class="navbar-form navbar-right" role="input">
-        <div class="form-group">
-          <input type="text" id="message-input" class="form-control" placeholder="Message">
-        </div>
-        <button type="button" id="submit-button" class="btn btn-default">Submit</button>
-        <button type="button" id="delete-messages" class="btn btn-danger">Delete Messages</button>
-      </form>
-	</nav>
+
+		<nav class="navbar navbar-default navbar-fixed-top navbarCustom">
+			<div class="container-fluid">
+		  <a class="navbar-brand" href="#">
+	      <span class="logo">Git Clone Slack</span>
+	      </a>
+	     <form class="navbar-form navbar-left navCheckbox" role="input">
+	     	<div class="form-group checkboxGroup">
+				<input type="checkbox" id="dark-box"><span class="userCheckbox">Dark Theme</span>
+				<input type="checkbox" id="large-box"><span class="userCheckbox">Large Text</span>
+			</div>
+	     </form>
+	     <form class="navbar-form navbar-right" role="input">
+	        <div class="form-group">
+	          <input type="text" class="form-control" id="messageInput" placeholder="Message">
+	        </div>
+	        <button type="button" id="submitButton" class="btn btn-default">Submit</button>
+	        <button type="button" id="deleteAllButton" class="btn btn-danger">Delete Messages</button>
+	      </form>
 	</div>
-	<div id="message-container" class="normalTheme">
-		<p>Test</p>
-		<p>Test 2</p>
+		</nav>
+	
+		<div id="messagesContainer" class="normalTheme">
+		
 	</div>
 
-<<<<<<< HEAD
-<script src="js/main.js"></script>	
+ 
+
+
+<script src="js/Chatty.js"></script>
+<script src="js/ChattyReadWrite.js"></script>	
+<script src="js/main.js"></script>
 <script src="event-listeners.js"></script>
-<script src="js/XHRcall.js"></script>	
->>>>>>> master
+
 </body>
 </html>
