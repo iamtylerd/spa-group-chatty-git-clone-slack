@@ -6,13 +6,38 @@
 	<title>Git clone Slack</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-	<h1>Test</h1>
+	<div class="navContainer clearfix">
+	<nav clas="navbar navbar-default navbar-fixed-top navbar-custom">
+	  <a class="navbar-brand" href="#">
+      <span class="logo">Git Clone Slack</span>
+      </a>
+     <form class="navbar-form navbar-left navCheckbox" role="input">
+     	<div class="form-group checkboxGroup">
+			<input type="checkbox" id="dark"><span class="userCheckbox">Dark Theme</span>
+			<input type="checkbox" id="largeFont"><span class="userCheckbox">Large Text</span>
+		</div>
+     </form>
+     <form class="navbar-form navbar-right" role="input">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Message">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-danger">Delete Messages</button>
+      </form>
+	</nav>
+	</div>
+	<div id="messagesContainer" class="normalTheme">
+		<p>Test</p>
+		<p>Test 2</p>
+	</div>
 
+<<<<<<< HEAD
 <script src="js/main.js"></script>	
 <script src="event-listeners.js"></script>
+<script src="js/XHRcall.js"></script>	
+>>>>>>> master
 </body>
 </html>
