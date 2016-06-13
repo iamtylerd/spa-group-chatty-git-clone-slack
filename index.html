@@ -17,13 +17,13 @@
 	      </a>
 	     <form class="navbar-form navbar-left navCheckbox" role="input">
 	     	<div class="form-group checkboxGroup">
-				<input type="checkbox" id="dark"><span class="userCheckbox">Dark Theme</span>
-				<input type="checkbox" id="largeFont"><span class="userCheckbox">Large Text</span>
+				<input type="checkbox" id="dark-box"><span class="userCheckbox">Dark Theme</span>
+				<input type="checkbox" id="large-box"><span class="userCheckbox">Large Text</span>
 			</div>
 	     </form>
 	     <form class="navbar-form navbar-right" role="input">
 	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Message">
+	          <input type="text" class="form-control" id="messageInput" placeholder="Message">
 	        </div>
 	        <button type="button" id="submitButton" class="btn btn-default">Submit</button>
 	        <button type="button" id="deleteAllButton" class="btn btn-danger">Delete Messages</button>
@@ -32,17 +32,16 @@
 		</nav>
 	
 		<div id="messagesContainer" class="normalTheme">
-			<p>Test</p>
-			<p>Test 2</p>
+		
 	</div>
 
-  <div id="messagesContainer">
-    
-  </div>
+ 
 
 
 <script src="js/Chatty.js"></script>
 <script src="js/ChattyReadWrite.js"></script>	
 <script src="js/main.js"></script>
+<script src="event-listeners.js"></script>
+
 </body>
 </html>
