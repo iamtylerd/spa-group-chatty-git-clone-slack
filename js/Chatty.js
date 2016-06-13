@@ -27,8 +27,6 @@ var Chatty = (function () {
           Chatty.writeMessageToDOM(currentMessageId, currentMessage);
         }
 
-        //Chatty.bindEventListeners();
-
       });
 
       messageLoader.open("GET", "json/messages.json");
