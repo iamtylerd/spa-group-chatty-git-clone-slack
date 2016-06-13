@@ -1,41 +1,45 @@
-var Chatty = (function(Chatty){
+var Chatty = (function () {
+  
+  var messages = [];
+  var idCounter = 0;
 
-  Chatty.writeMessageToDOM = function(id, message) {
-    // Get messagesContainer
-    var messagesContainer = document.getElementById("messagesContainer");
+  return {
+  
+    loadMessages: function (callback) {
 
-    // Create a newMessage div
-    var newMessage = document.createElement("div");
+      var messageLoader = new XMLHttpRequest();
 
-    // Add to new message
-    newMessage.innerHTML = `<p class="messageText">${message}<p>
-                            <h6 class="messageID">${id}</h6>
-                            <button id="deleteBtn--${id}">Delete Message</button>`;
+      messageLoader.addEventListener("load", function () {
+        
+        var data = JSON.parse(this.responseText);
 
-    // Append newMessage to messagesContainer
-    messagesContainer.appendChild(newMessage);
+        var listOfMessages = data.Messages;
 
-    // Add event listener to newly created delete button
-    var buttonId = "delete--" + id; 
-    var deleteButton = document.getElementById(buttonId);
+        // Add each message to array
+        for (let i = 0; i < listOfMessages.length; i++) {
+          // Get current message being looked at
+          var currentMessage = listOfMessages[i].Message;
+          // Add message to private array
+          messages.push(currentMessage);
+          // Get unique ID
+          var currentMessageId = Chatty.getId();
+          // Write message to DOM
+          Chatty.writeMessageToDOM(currentMessageId, currentMessage);
+        }
 
-    //
-    console.log(deleteButton);
+        //Chatty.bindEventListeners();
+
+      });
+
+      messageLoader.open("GET", "json/messages.json");
+      messageLoader.send();
+    },
+
+    getId: function() {
+      idCounter += 1;
+      return idCounter;
+    }
 
   };
 
-  Chatty.readAllMessages = function() {
-    // Read all messages
-  };
-
-  Chatty.deleteMessageWithId = function(id) {
-    
-
-
-  };
-
-  Chatty.aName = "Chatty";
-
-  return Chatty;
-
-})(Chatty || {});
+})();
