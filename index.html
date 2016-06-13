@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+
 		<nav class="navbar navbar-default navbar-fixed-top navbarCustom">
 			<div class="container-fluid">
 		  <a class="navbar-brand" href="#">
@@ -24,8 +25,8 @@
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Message">
 	        </div>
-	        <button type="button" class="btn btn-default">Submit</button>
-	        <button type="button" class="btn btn-danger">Delete Messages</button>
+	        <button type="button" id="submitButton" class="btn btn-default">Submit</button>
+	        <button type="button" id="deleteAllButton" class="btn btn-danger">Delete Messages</button>
 	      </form>
 	</div>
 		</nav>
@@ -35,7 +36,13 @@
 			<p>Test 2</p>
 	</div>
 
+  <div id="messagesContainer">
+    
+  </div>
+
+
+<script src="js/Chatty.js"></script>
+<script src="js/ChattyReadWrite.js"></script>	
 <script src="js/main.js"></script>
-<script src="js/XHRcall.js"></script>	
 </body>
 </html>
