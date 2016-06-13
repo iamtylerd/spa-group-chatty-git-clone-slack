@@ -9,7 +9,7 @@ var Chatty = (function(Chatty){
     var newMessage = document.createElement("div");
 
     // Add to new message
-    newMessage.innerHTML = `<div id="message--${id}">
+    newMessage.innerHTML = `<div id="message--${id} class="message">
                               <p class="messageText">${message}<p>
                               <h6 class="messageID">${id}</h6>
                               <button id="deleteBtn--${id}">Delete Message</button>
@@ -32,6 +32,18 @@ var Chatty = (function(Chatty){
     messageToDelete.parentNode.removeChild(messageToDelete);    
 
   };
+
+  Chatty.deleteAllMessages = function() {
+
+    var listOfMessages = document.getElementsByClassName("message");
+    console.log(listOfMessages);
+    // Loop through and delete each message
+    for (let i = 0; i < listOfMessages.length; i++) {
+      var currentMessage = listOfMessages[i];
+      currentMessage.parentNode.removeChild(currentMessage);
+    }
+
+  }
 
   return Chatty;
 

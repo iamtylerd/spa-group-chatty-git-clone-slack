@@ -11,6 +11,22 @@ Chatty.loadMessages();
 // }
 
 document.body.addEventListener("click", deleteButtonPressed);
+document.getElementById("submitButton").addEventListener("click", submitButtonPressed);
+document.getElementById("deleteAllButton").addEventListener("click", deleteAllButtonPressed);
+
+function submitButtonPressed() {
+
+  var newMessage = document.getElementById("messageInput").value;
+
+  Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
+
+}
+
+function deleteAllButtonPressed() {
+
+  Chatty.deleteAllMessages();
+
+}
 
 function deleteButtonPressed () {
   
