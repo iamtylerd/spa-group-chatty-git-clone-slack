@@ -1,3 +1,8 @@
+
+.navbarCustom {
+	background: #E6C2C2;
+}
+
 .navContainer {
 	padding-top: 15px;
 }
@@ -19,11 +24,11 @@
 	margin-top: 1rem;
 }
 
+
 .normalTheme {
 	background: whitesmoke;
 	margin: 2rem auto 0;
 	width: 60%;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -33,15 +38,53 @@
 .darkTheme {
 	background: darkslategrey;
 	color: whitesmoke;
-	margin: 2rem auto 0;
+	margin: 5rem auto 0;
 	width: 60%;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 
 .largeText {
 	font-size: 3rem;
 }
+
+#messagesContainer {
+	margin-top: 10rem;
+}
+
+
+
+
+
+
+
+
+
+/*@media (min-width: 768) {
+	body {
+		padding-top: 110px;
+	}
+}
+@media (min-width: 986) {
+	body {
+		padding-top: 71px;
+	}
+}
+
+@media (min-width: 419px) {
+	body {
+		padding-top: 171px;
+	}
+}
+*/
+
+
+
+
+
+
+
+
+
+
