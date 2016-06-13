@@ -8,22 +8,25 @@ var messageReturn = document.getElementById("").addEventListener("keypress", fun
 
 //Listener for delete all messages
 var deleteMessages = document.getElementById("").addEventListener("click", function(e) {
-	//delete all current messages
+	//if no messages - document.getElementById("").setAttribute("disabled", true);
+	// else - delete all current messages
 });
 
 //Listener for checkboxes
-var darkBox = document.getElementById("").addEventListener("click", function(e) {
-	//toggle code between (dark gray background, white font) and (white background, black font (default))
+var darkBox = document.getElementById("").addEventListener("toggle", function(e) {
+	//toggle to darkgray background/white text
 });
 
-var largeBox = document.getElementById("").addEventListener("click", function(e) {
-	//
-})
+var largeBox = document.getElementById("").addEventListener("toggle", function(e) {
+	//toggle to larger font size
+});
 
 //Listener for delete last message
 var deleteButton = document.getElementById("").addEventListener("click", function(e) {
-	//delete last message
-})
+	//var to store parent element
+	//var lastChild = parent.lastElementChild;
+	//parent.removeChild(lastChild);
+});
 
 
 
