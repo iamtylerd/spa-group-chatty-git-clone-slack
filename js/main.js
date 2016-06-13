@@ -1,15 +1,5 @@
 Chatty.loadMessages();
 
-// function deleteMessagePressed() {
-
-//   // Get current message
-//   var currentMessage = event.target.parentNode;
-  
-//   // Remove message
-//   document.getElementById("messagesContainer").removeChild(currentMessage);
-
-// }
-
 document.body.addEventListener("click", deleteButtonPressed);
 document.getElementById("submitButton").addEventListener("click", submitButtonPressed);
 document.getElementById("deleteAllButton").addEventListener("click", deleteAllButtonPressed);
