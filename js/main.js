@@ -74,8 +74,9 @@ function deleteButtonPressed () {
 }
 
 
-
-
+$('#editModal').on('shown.bs.modal', function () {
+    $('#editMessageInput').focus();
+});
 
 
 
