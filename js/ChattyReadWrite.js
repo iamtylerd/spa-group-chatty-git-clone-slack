@@ -35,15 +35,9 @@ var Chatty = (function(Chatty){
 
   Chatty.deleteAllMessages = function() {
 
-    var listOfMessages = document.getElementsByClassName("message");
-    console.log(listOfMessages);
-    // Loop through and delete each message
-    for (let i = 0; i < listOfMessages.length; i++) {
-      var currentMessage = listOfMessages[i];
-      currentMessage.parentNode.removeChild(currentMessage);
-    }
+    document.getElementById("messagesContainer").innerHTML = "";
 
-  }
+  };
 
   return Chatty;
 
