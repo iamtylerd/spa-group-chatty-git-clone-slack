@@ -1,7 +1,7 @@
 var Chatty = (function () {
   
-  var messages = [];
-  var idCounter = 0;
+  //var messages = [];
+  // var idCounter = 0;
 
   return {
   
@@ -20,7 +20,7 @@ var Chatty = (function () {
           // Get current message being looked at
           var currentMessage = listOfMessages[i].Message;
           // Add message to private array
-          messages.push(currentMessage);
+          Chatty.messages.push(currentMessage);
           // Get unique ID
           var currentMessageId = Chatty.getId();
           // Write message to DOM
@@ -34,10 +34,22 @@ var Chatty = (function () {
     },
 
     getId: function() {
-      idCounter += 1;
-      return idCounter;
-    }
+      Chatty.idCounter += 1;
+      return Chatty.idCounter;
+    },
 
-  };
+    idCounter: 0,
+
+    messages: [],
+
+    // messageLimit: function() {
+    //   var parentNode = document.getElementById("messagesContainer");
+    //   if (Chatty.messages.length > 20) {
+    //     parentNode.removeChild(parentNode.firstChild);
+
+    //   }
+    // }
+  }
+
 
 })();

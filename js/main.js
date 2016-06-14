@@ -4,14 +4,30 @@ document.body.addEventListener("click", deleteButtonPressed);
 document.getElementById("submitButton").addEventListener("click", submitButtonPressed);
 document.getElementById("deleteAllButton").addEventListener("click", deleteAllButtonPressed);
 document.getElementById("messageInput").addEventListener("keypress", enterButtonPressed);
+var disabledAttribute = document.getElementById("deleteAllButton");
 
 function submitButtonPressed() {
 
+  
+
   var newMessage = document.getElementById("messageInput").value;
+
+  Chatty.messages.push(newMessage);
 
   Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
 
   document.getElementById("messageInput").value = "";
+
+  disabledAttribute.removeAttribute("disabled");
+
+
+  //Message limit functionality
+  var parentNode = document.getElementById("messagesContainer");
+      if (Chatty.messages.length > 20) {
+        parentNode.removeChild(parentNode.firstChild);
+        Chatty.messages.pop();
+
+      }
 
 }
 
@@ -23,9 +39,21 @@ function enterButtonPressed(event) {
 
     var newMessage = document.getElementById("messageInput").value;
 
+    Chatty.messages.push(newMessage);
+
     Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
 
     document.getElementById("messageInput").value = "";
+
+    disabledAttribute.removeAttribute("disabled");
+
+    //Message limit functionality
+    var parentNode = document.getElementById("messagesContainer");
+      if (Chatty.messages.length > 20) {
+        parentNode.removeChild(parentNode.firstChild);
+        Chatty.messages.pop();
+
+      }
 
    }
 
@@ -45,4 +73,10 @@ function deleteButtonPressed () {
   }
 
 }
+
+
+
+
+
+
 
