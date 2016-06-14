@@ -19,6 +19,10 @@
 	     	<div class="form-group checkboxGroup">
 				<input type="checkbox" id="dark-box"><span class="userCheckbox">Dark Theme</span>
 				<input type="checkbox" id="large-box"><span class="userCheckbox">Large Text</span>
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+				  Change Theme
+				</button>
 			</div>
 	     </form>
 	     <form class="navbar-form navbar-right" role="input">
@@ -40,12 +44,43 @@
     
   </div>
 
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Color Picker</h4>
+      </div>
+      <div class="modal-body">
+        <div id="backgroundPicker">
+        	<h3>Please select a color for the background</h3>
+        	<input type="color" id="bgColorPicker">
+        </div>
+        <div id="textPicker">
+        	<h3>Please select a color for the text</h3>
+        	<input type="color" id="textColorPicker">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveColorChanges" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <script src="js/Chatty.js"></script>
 <script src="js/ChattyReadWrite.js"></script>	
 <script src="js/main.js"></script>
 <script src="js/event-listeners.js"></script>
+<script src="js/colorPicker.js"></script>
+
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 </body>
 </html>
