@@ -3,12 +3,31 @@ Chatty.loadMessages();
 document.body.addEventListener("click", deleteButtonPressed);
 document.getElementById("submitButton").addEventListener("click", submitButtonPressed);
 document.getElementById("deleteAllButton").addEventListener("click", deleteAllButtonPressed);
+document.getElementById("messageInput").addEventListener("keypress", enterButtonPressed);
 
 function submitButtonPressed() {
 
   var newMessage = document.getElementById("messageInput").value;
 
   Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
+
+  document.getElementById("messageInput").value = "";
+
+}
+
+function enterButtonPressed(event) {
+
+   if(event.keyCode == 13){
+     
+    event.preventDefault();
+
+    var newMessage = document.getElementById("messageInput").value;
+
+    Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
+
+    document.getElementById("messageInput").value = "";
+
+   }
 
 }
 

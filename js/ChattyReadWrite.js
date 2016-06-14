@@ -10,9 +10,9 @@ var Chatty = (function(Chatty){
 
     // Add to new message
     newMessage.innerHTML = `<div id="message--${id}" class="message">
-                              <p class="messageText">${message}<p>
-                              <h6 class="messageID">${id}</h6>
-                              <button id="deleteBtn--${id}">Delete Message</button>
+                              <p class="messageText">${message}</p>
+                              <h6 class="messageID">${id}.</h6>
+                              <button id="deleteBtn--${id}" class="deleteButton">Delete Message</button>
                             </div>`;
 
     // Append newMessage to messagesContainer
