@@ -38,7 +38,6 @@ var Chatty = (function(Chatty) {
       }
       
       var timestamp = `${curMonth} ${curDay}, ${curYear} at ${curHour}:${curMinute}:${curSeconds}:${curMillseconds} ${suffix}`;
-      console.log(timestamp);
 
       // Add to new message
       newMessage.innerHTML = `<div id="message--${id}" class="message">
