@@ -10,11 +10,11 @@ var disabledAttribute = document.getElementById("deleteAllButton");
 
 function submitButtonPressed() {
 
-  if (document.getElementById("messageInput").value === "" && document.getElementById("userSelect").value === "") {
+  if (document.getElementById("messageInput").value === "" && document.getElementById("userSelect").value === "none") {
     alert("Please enter a message and select a user name");
   } else if (document.getElementById("messageInput").value === "") {
     alert("Please enter a message to add");
-  } else if (document.getElementById("userSelect").value === "") {
+  } else if (document.getElementById("userSelect").value === "none") {
     alert("Please select a user name");
   } else {
 
@@ -32,6 +32,7 @@ function submitButtonPressed() {
     //Removing disabled attribute from delete button
     disabledAttribute.removeAttribute("disabled");
 
+    document.getElementById("userSelect").value = "none";
 
     //Message limit functionality
     var parentNode = document.getElementById("messagesContainer");
