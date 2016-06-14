@@ -30,7 +30,6 @@ var Chatty = (function(Chatty){
     var messageToDelete = document.getElementById(messageId);
     var container = document.getElementById("messagesContainer");
     messageToDelete.parentNode.removeChild(messageToDelete);   
-
   };
 
   Chatty.deleteAllMessages = function() {
@@ -38,6 +37,7 @@ var Chatty = (function(Chatty){
     document.getElementById("messagesContainer").innerHTML = "";
 
   };
+
 
   return Chatty;
 
