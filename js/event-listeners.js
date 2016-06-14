@@ -2,14 +2,16 @@
 var container = document.getElementById("messagesContainer");
 var input = document.getElementById("messageInput");
 
-//Listener for enter/return in the message field
-// var messageReturn = document.getElementById("message-input").addEventListener("keypress", function(e) {
-// 	if (e.code === 13) {
-// 		var newMessage = document.createElement("p");
-// 		newMessage.innerHTML = input.value;
-// 		container.appendChild(newMessage);
-// 	}
-// });
+// EDIT MODAL
+
+var editMessageButton = document.getElementById("editMessageButton");
+editMessageButton.addEventListener("click", Chatty.editMessageButtonPressed);
+
+var editMessageSubmitButton = document.getElementById("editSubmit");
+editMessageSubmitButton.addEventListener("click", Chatty.editSubmitButtonPressed);
+
+// Get selected message
+document.body.addEventListener("click", Chatty.messageSelected);
 
 
 //Listener for delete all messages
@@ -17,13 +19,14 @@ var deleteMessages = document.getElementById("deleteAllButton");
 deleteMessages.addEventListener("click", function(e) {
 	//if no messages, delete button is disabled
 	if (container.hasChildNodes() === false){
-		deleteMessages.setAttribute("disabled", true);
-	}
-	else {
+		deleteMessages.disabled = true;
+	} else {
 		while (container.firstChild) {
   		container.removeChild(container.firstChild);
 		}
 	}
+
+	Chatty.idCounter = 0;
 });
 
 //Listener for checkboxes
@@ -35,13 +38,4 @@ var largeBox = document.getElementById("large-box").addEventListener("click", fu
 	// document.querySelector("p").classList.toggle("largeText");
 	container.classList.toggle("largeText");
 });
-
-// //Listener for delete last message
-// var deleteButton = document.getElementById("delete-button").addEventListener("click", function(e) {
-// 	//var to store parent element
-// 	//var lastChild = parent.lastElementChild;
-// 	//parent.removeChild(lastChild);
-// });
-
-
-
+s

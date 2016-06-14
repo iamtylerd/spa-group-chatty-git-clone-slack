@@ -4,6 +4,7 @@ document.body.addEventListener("click", deleteButtonPressed);
 document.getElementById("submitButton").addEventListener("click", submitButtonPressed);
 document.getElementById("deleteAllButton").addEventListener("click", deleteAllButtonPressed);
 document.getElementById("messageInput").addEventListener("keypress", enterButtonPressed);
+var disabledAttribute = document.getElementById("deleteAllButton");
 
 function submitButtonPressed() {
 
@@ -12,6 +13,8 @@ function submitButtonPressed() {
   Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
 
   document.getElementById("messageInput").value = "";
+
+  disabledAttribute.removeAttribute("disabled");
 
 }
 
@@ -26,6 +29,8 @@ function enterButtonPressed(event) {
     Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
 
     document.getElementById("messageInput").value = "";
+
+    disabledAttribute.removeAttribute("disabled");
 
    }
 
