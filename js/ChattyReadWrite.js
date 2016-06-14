@@ -29,7 +29,7 @@ var Chatty = (function(Chatty){
     var messageId = "message--" + id;
     var messageToDelete = document.getElementById(messageId);
     var container = document.getElementById("messagesContainer");
-    messageToDelete.parentNode.removeChild(messageToDelete);    
+    messageToDelete.parentNode.removeChild(messageToDelete);   
 
   };
 
