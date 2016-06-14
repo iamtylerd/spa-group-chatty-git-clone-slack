@@ -10,26 +10,36 @@ var disabledAttribute = document.getElementById("deleteAllButton");
 
 function submitButtonPressed() {
 
-  var newMessage = document.getElementById("messageInput").value;
+  if (document.getElementById("messageInput").value === "" && document.getElementById("userSelect").value === "") {
+    alert("Please enter a message and select a user name");
+  } else if (document.getElementById("messageInput").value === "") {
+    alert("Please enter a message to add");
+  } else if (document.getElementById("userSelect").value === "") {
+    alert("Please select a user name");
+  } else {
 
-  Chatty.messages.push(newMessage);
+    var newMessage = {
+      "message": document.getElementById("messageInput").value,
+      "user": document.getElementById("userSelect").value
+    };
 
-  Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
+    Chatty.messages.push(newMessage);
 
-  document.getElementById("messageInput").value = "";
+    Chatty.writeMessageToDOM(Chatty.getId(), newMessage);
 
-  //Removing disabled attribute from delete button
-  disabledAttribute.removeAttribute("disabled");
+    document.getElementById("messageInput").value = "";
+
+    //Removing disabled attribute from delete button
+    disabledAttribute.removeAttribute("disabled");
 
 
-
-  //Message limit functionality
-  var parentNode = document.getElementById("messagesContainer");
-      if (Chatty.messages.length > 20) {
-        parentNode.removeChild(parentNode.firstChild);
-        Chatty.messages.pop();
-      }
-
+    //Message limit functionality
+    var parentNode = document.getElementById("messagesContainer");
+        if (Chatty.messages.length > 20) {
+          parentNode.removeChild(parentNode.firstChild);
+          Chatty.messages.pop();
+        }
+  }
 }
 
 function enterButtonPressed(event) {

@@ -1,10 +1,25 @@
 {
- "Messages": [
-   {"Message": "Wow, this is way better than Slack"},
-   {"Message": "Yeah, Slack sucks!"},
-   {"Message": "When is lunch?"},
-   {"Message": "Taco Mondays?"},
-   {"Message": "Taco everday"}
-   ]
+  "Messages": 
+  [
+    {
+      "Message": "Wow, this is way better than Slack",
+      "User": "Admin"
+    },
+    {
+      "Message": "Yeah, Slack sucks!",
+      "User": "Admin"
+    },
+    {
+      "Message": "When is lunch?",
+      "User": "Admin"
+    },
+    {
+      "Message": "Taco Mondays?",
+      "User": "Admin"
+    },
+    {
+      "Message": "Taco everday",
+      "User": "Admin"
+    }
+  ]
 }
-
