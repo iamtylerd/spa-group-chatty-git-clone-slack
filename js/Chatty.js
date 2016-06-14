@@ -1,7 +1,5 @@
 var Chatty = (function () {
   
-  var messages = [];
-
   return {
   
     loadMessages: function (callback) {
@@ -16,10 +14,17 @@ var Chatty = (function () {
 
         // Add each message to array
         for (let i = 0; i < listOfMessages.length; i++) {
+          
           // Get current message being looked at
+          
           var currentMessage = listOfMessages[i].Message;
+          // var currentMessage = {
+          //   "message": listOfMessages[i].Message,
+          //   "user": listOfMessages[i].User
+          // };
+
           // Add message to private array
-          messages.push(currentMessage);
+          Chatty.messages.push(currentMessage);
           // Get unique ID
           var currentMessageId = Chatty.getId();
           // Write message to DOM
@@ -29,6 +34,7 @@ var Chatty = (function () {
       });
 
       messageLoader.open("GET", "json/messages.json");
+      //messageLoader.open("GET", "json/messages2.json");
       messageLoader.send();
     },
 
@@ -37,8 +43,12 @@ var Chatty = (function () {
       return Chatty.idCounter;
     },
 
-    idCounter: 0
+    idCounter: 0,
 
-  };
+    //Array holding loaded and/or user messages
+    messages: [],
+
+  
+  }
 
 })();
