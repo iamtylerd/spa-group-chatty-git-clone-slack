@@ -44,7 +44,7 @@ var Chatty = (function () {
     idCounter: 0,
 
     //Array holding loaded and/or user messages
-    messages: [],
+    messages: []
 
   
   };
