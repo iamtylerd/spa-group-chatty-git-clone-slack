@@ -17,6 +17,16 @@ editMessageSubmitButton.addEventListener("click", Chatty.editSubmitButtonPressed
 document.body.addEventListener("click", Chatty.messageSelected);
 
 
+// User select
+var selectedUser = document.getElementById("userSelect");
+selectedUser.addEventListener("change", Chatty.getUserValue);
+
+// New user
+var newNameInput = document.getElementById("addNameInput");
+var newNameValue = newNameInput.value;
+var newNameButton = document.getElementById("nameSubmit");
+newNameButton.addEventListener("click", Chatty.pushNewName);
+
 //Listener for delete all messages
 var deleteMessages = document.getElementById("deleteAllButton");
 

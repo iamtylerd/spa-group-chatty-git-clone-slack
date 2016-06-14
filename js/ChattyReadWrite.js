@@ -1,11 +1,7 @@
 var Chatty = (function(Chatty) {
 
   Chatty.writeMessageToDOM = function(id, message) {
-
-    if (message === "") {
-      alert("Please enter a message to add");
-    } else {
-
+    
       // Get messagesContainer
       var messagesContainer = document.getElementById("messagesContainer");
 
@@ -38,31 +34,30 @@ var Chatty = (function(Chatty) {
       }
       
       var timestamp = `${curMonth} ${curDay}, ${curYear} at ${curHour}:${curMinute}:${curSeconds}:${curMillseconds} ${suffix}`;
-      console.log(timestamp);
 
-      // Add to new message
-      newMessage.innerHTML = `<div id="message--${id}" class="message">
-                                <p class="messageText">${message}</p>
-                                <h6 class="messageID">${id}.</h6>
-                                <h6 class="userID">Sent by User on</h6>
-                                <h6 class="timestamp">${timestamp}</h6>
-                                <button id="deleteBtn--${id}" class="deleteButton">Delete Message</button>
-                              </div>`;
-
-
+      // // Add to new message
       // newMessage.innerHTML = `<div id="message--${id}" class="message">
-      //                           <p class="messageText">${message.message}</p>
+      //                           <p class="messageText">${message}</p>
       //                           <h6 class="messageID">${id}.</h6>
-      //                           <h6 class="userID">Sent by ${message.user} on</h6>
+      //                           <h6 class="userID">Sent by User on</h6>
       //                           <h6 class="timestamp">${timestamp}</h6>
       //                           <button id="deleteBtn--${id}" class="deleteButton">Delete Message</button>
       //                         </div>`;
 
 
+      newMessage.innerHTML = `<div id="message--${id}" class="message">
+                                <p class="messageText">${message.message}</p>
+                                <h6 class="messageID">${id}.</h6>
+                                <h6 class="userID">Sent by ${message.user} on</h6>
+                                <h6 class="timestamp">${timestamp}</h6>
+                                <button id="deleteBtn--${id}" class="deleteButton">Delete Message</button>
+                              </div>`;
+
+
       // Append newMessage to messagesContainer
       messagesContainer.appendChild(newMessage);
 
-    }
+
   };
 
   Chatty.readAllMessages = function() {

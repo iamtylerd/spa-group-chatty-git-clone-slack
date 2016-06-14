@@ -16,12 +16,10 @@ var Chatty = (function () {
         for (let i = 0; i < listOfMessages.length; i++) {
           
           // Get current message being looked at
-          
-          var currentMessage = listOfMessages[i].Message;
-          // var currentMessage = {
-          //   "message": listOfMessages[i].Message,
-          //   "user": listOfMessages[i].User
-          // };
+          var currentMessage = {
+            "message": listOfMessages[i].Message,
+            "user": listOfMessages[i].User
+          };
 
           // Add message to private array
           Chatty.messages.push(currentMessage);
@@ -46,9 +44,9 @@ var Chatty = (function () {
     idCounter: 0,
 
     //Array holding loaded and/or user messages
-    messages: [],
+    messages: []
 
   
-  }
+  };
 
 })();
