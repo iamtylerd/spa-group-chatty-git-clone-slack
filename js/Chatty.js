@@ -1,7 +1,6 @@
 var Chatty = (function () {
   
   var messages = [];
-  var idCounter = 0;
 
   return {
   
@@ -34,9 +33,11 @@ var Chatty = (function () {
     },
 
     getId: function() {
-      idCounter += 1;
-      return idCounter;
-    }
+      Chatty.idCounter += 1;
+      return Chatty.idCounter;
+    },
+
+    idCounter: 0
 
   };
 
