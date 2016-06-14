@@ -43,9 +43,7 @@ var Chatty = (function(Chatty){
 
   Chatty.populateEditMessage = function() {
     var editMessageInput = document.getElementById("editMessageInput");
-
-   editMessageInput.value = Chatty.selectedMessage.querySelector("p").innerHTML;
-
+    editMessageInput.value = Chatty.selectedMessage.querySelector("p").innerHTML;
   };
 
   Chatty.editMessageButtonPressed = function() {
