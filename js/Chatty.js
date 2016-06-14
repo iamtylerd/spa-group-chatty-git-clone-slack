@@ -1,8 +1,5 @@
 var Chatty = (function () {
   
-  //var messages = [];
-  // var idCounter = 0;
-
   return {
   
     loadMessages: function (callback) {
@@ -40,16 +37,10 @@ var Chatty = (function () {
 
     idCounter: 0,
 
+    //Array holding loaded and/or user messages
     messages: [],
 
-    // messageLimit: function() {
-    //   var parentNode = document.getElementById("messagesContainer");
-    //   if (Chatty.messages.length > 20) {
-    //     parentNode.removeChild(parentNode.firstChild);
-
-    //   }
-    // }
+  
   }
-
 
 })();

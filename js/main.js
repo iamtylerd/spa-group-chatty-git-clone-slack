@@ -4,11 +4,10 @@ document.body.addEventListener("click", deleteButtonPressed);
 document.getElementById("submitButton").addEventListener("click", submitButtonPressed);
 document.getElementById("deleteAllButton").addEventListener("click", deleteAllButtonPressed);
 document.getElementById("messageInput").addEventListener("keypress", enterButtonPressed);
+
 var disabledAttribute = document.getElementById("deleteAllButton");
 
 function submitButtonPressed() {
-
-  
 
   var newMessage = document.getElementById("messageInput").value;
 
@@ -18,7 +17,9 @@ function submitButtonPressed() {
 
   document.getElementById("messageInput").value = "";
 
+  //Removing disabled attribute from delete button
   disabledAttribute.removeAttribute("disabled");
+
 
 
   //Message limit functionality
@@ -26,7 +27,6 @@ function submitButtonPressed() {
       if (Chatty.messages.length > 20) {
         parentNode.removeChild(parentNode.firstChild);
         Chatty.messages.pop();
-
       }
 
 }
@@ -45,6 +45,7 @@ function enterButtonPressed(event) {
 
     document.getElementById("messageInput").value = "";
 
+    //Removing disabled attribute from delete button
     disabledAttribute.removeAttribute("disabled");
 
     //Message limit functionality
@@ -52,10 +53,8 @@ function enterButtonPressed(event) {
       if (Chatty.messages.length > 20) {
         parentNode.removeChild(parentNode.firstChild);
         Chatty.messages.pop();
-
       }
-
-   }
+  }
 
 }
 
