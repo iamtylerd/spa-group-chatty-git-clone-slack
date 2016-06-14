@@ -30,9 +30,10 @@
 	     </form>
 	     <form class="navbar-form navbar-right" role="input">
 	        <div class="form-group">
-	         <label for="userSelect">Select list:</label>
+	         <label for="userSelect">Select Name:</label>
 			  <select class="form-control" id="userSelect">
-			    <option>1</option>
+			    <option></option>
+			    <option>Create New</option>
 			  </select>
 	          <input type="text" id="messageInput" class="form-control" placeholder="Message">
 	        </div>
@@ -110,19 +111,19 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="editModalLabel">Edit Message</h4>
+            <h4 class="modal-title" id="editModalLabel">Add your name</h4>
           </div>
           <div class="modal-body">
             
             <div class="form-group">
-              <label for="editMessageInput">Enter a new message:</label>
-              <input type="text" class="form-control" id="addUserInput">
+              <label for="editNameInput">Enter your name:</label>
+              <input type="text" class="form-control" id="addNameInput">
             </div>
 
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            <button id="editSubmit" type="button" class="btn btn-primary">Submit</button>
+            <button id="nameSubmit" type="button" class="btn btn-primary">Submit</button>
           </div>
         </div>
       </div>
@@ -135,10 +136,10 @@
 <script src="js/Chatty.js"></script>
 <script src="js/ChattyReadWrite.js"></script>
 <script src="js/ChattyEditMessage.js"></script>
-<script src="js/main.js"></script>
 <script src="js/event-listeners.js"></script>
 <script src="js/colorPicker.js"></script>
 <script src="js/users.js"></script>
+<script src="js/main.js"></script>
 
 <!-- <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 
