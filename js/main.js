@@ -1,4 +1,5 @@
 Chatty.loadMessages();
+Chatty.populateUsers();
 
 document.body.addEventListener("click", deleteButtonPressed);
 document.getElementById("submitButton").addEventListener("click", submitButtonPressed);
