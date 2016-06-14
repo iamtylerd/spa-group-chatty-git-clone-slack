@@ -12,18 +12,13 @@
 }
 
 .navCheckbox {
-	margin-left: 15%;
+	margin-left: 10%;
 }
 
 .userCheckbox {
 	margin-left: 1rem;
 	margin-right: 1rem;
 }
-
-.checkboxGroup {
-	margin-top: 1rem;
-}
-
 
 .normalTheme {
 	background: whitesmoke;
@@ -62,6 +57,7 @@
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 2rem;
+	padding: .5rem;
 }
 
 .messageText,
@@ -102,7 +98,7 @@
 
 
 .selected {
-	border: 2px solid black;
+	border: 2px solid;
 }
 
 
