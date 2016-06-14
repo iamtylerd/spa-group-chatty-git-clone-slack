@@ -3,6 +3,7 @@ var Chatty = (function (Chatty) {
 var bgPicker = document.getElementById("bgColorPicker");
 var textPicker = document.getElementById("textColorPicker");
 var saveColor = document.getElementById("saveColorChanges");
+var borderColor = document.getElementsByClassName(".selected");
 
 
 Chatty.changeColors = function () {
