@@ -11,14 +11,6 @@ var input = document.getElementById("messageInput");
 // 	}
 // });
 
-// //Listener for submit button
-var submitButton = document.getElementById("submitButton").addEventListener("click", function(e) {
-	var newMessage = document.createElement("p");
-	newMessage.innerHTML = input.value;
-	container.appendChild(newMessage);
-	//clear input after submitting
-	input.value = "";
-});
 
 //Listener for delete all messages
 var deleteMessages = document.getElementById("deleteAllButton");

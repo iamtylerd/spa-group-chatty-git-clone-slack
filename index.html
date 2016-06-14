@@ -6,7 +6,7 @@
 	<title>Git clone Slack</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -23,7 +23,9 @@
 	     </form>
 	     <form class="navbar-form navbar-right" role="input">
 	        <div class="form-group">
-	          <input type="text" class="form-control" id="messageInput" placeholder="Message">
+
+	          <input type="text" id="messageInput" class="form-control" placeholder="Message">
+
 	        </div>
 	        <button type="button" id="submitButton" class="btn btn-default">Submit</button>
 	        <button type="button" id="deleteAllButton" class="btn btn-danger">Delete Messages</button>
@@ -31,17 +33,19 @@
 	</div>
 		</nav>
 	
-		<div id="messagesContainer" class="normalTheme">
-		
-	</div>
 
- 
+  <div id="messagesContainer" class="normalTheme">
+
+  	<h1 class="headerText">Git Clone Slack</h1>
+    
+  </div>
+
 
 
 <script src="js/Chatty.js"></script>
 <script src="js/ChattyReadWrite.js"></script>	
 <script src="js/main.js"></script>
-<script src="event-listeners.js"></script>
+<script src="js/event-listeners.js"></script>
 
 </body>
 </html>

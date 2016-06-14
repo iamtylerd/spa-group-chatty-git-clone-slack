@@ -45,6 +45,10 @@
 	align-items: center;
 }
 
+.darkTheme button {
+	color: darkslategrey;
+}
+
 .largeText {
 	font-size: 3rem;
 }
@@ -53,7 +57,21 @@
 	margin-top: 10rem;
 }
 
+.message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 2rem;
+}
 
+.messageText,
+.messageID {
+	margin: 0;
+}
+
+.messageID {
+	display: inline-block;
+}
 
 
 
